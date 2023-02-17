@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{ message }}</h1>
+        <div v-for="image in images">
+            <img v-bind:src="image" alt="Example Image">
+        </div>
+
+
+
+
+
+    </div>
+    <script>
+        const { createApp } = Vue
+        console.log(Vue)
+
+        const option = {
+            data() {
+                return {
+                    message: 'Hello Vue!',
+                    images: ['https://www.tomshw.it/images/images/2022/07/anime-su-prime-video-239476.jpg',
+                        'https://www.venetoformazione.it/wp-content/uploads/2022/02/ottimizzare-immagini-display-retina.jpg'
+                    ]
+                }
+            },
+
+        }
+        const app = createApp(option)
+        app.mount('#app')
+    </script>
+
+</body>
+
+</html>
